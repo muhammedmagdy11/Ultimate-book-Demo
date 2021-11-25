@@ -1,0 +1,8 @@
+2021-09-01 13:52:17.4535 ERROR from
+2021-09-01 13:54:08.3426 ERROR from weatherforecast controller
+2021-09-01 14:09:36.0070 ERROR from weatherforecast controller
+2021-09-01 14:09:36.0411 INFO errrooorrr from weatherforecast controller
+2021-09-01 14:09:36.0411 WARN  boom from weatherforecast controller
+2021-09-01 14:43:49.6274 ERROR from weatherforecast controller
+2021-09-01 14:43:49.6596 INFO errrooorrr from weatherforecast controller
+2021-09-01 14:43:49.6596 WARN  boom from weatherforecast controller
