@@ -13,6 +13,7 @@ namespace Contracts
         Company GetCompany(Guid CompanyId, bool trackchanges);
         void CreateCompany(Company company);
         void DeleteCompany(Company company);
+        void UpdateCompany(Company company);
 
     }
 }

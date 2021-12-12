@@ -29,12 +29,19 @@ namespace Repository
 
         public IEnumerable<Company> GetAllCompanies(bool trackChanges)
         {
-        return FindAll(trackChanges).OrderBy(c => c.Name).ToList();
+        //return FindAll(trackChanges).OrderBy(c => c.Name).ToList();
+        return FindAll(trackChanges).ToList();
         }
 
         public Company GetCompany(Guid CompanyId, bool trackchnages)
         {
             return FindByCondition(c => c.Id.Equals(CompanyId),trackchnages).SingleOrDefault();
+        }
+
+        public void UpdateCompany(Company company)
+        {
+            if(company!=null)
+             Update(company);
         }
     }
 }

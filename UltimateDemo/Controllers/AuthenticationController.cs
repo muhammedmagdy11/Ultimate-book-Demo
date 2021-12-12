@@ -58,7 +58,7 @@ namespace UltimateDemo.Controllers
                 _logger.LogWarn($"{nameof(Authenticate)}: Authentication failed. Wrong user name or password.");
             return Unauthorized();
             }
-            return Ok(new { Token = await _authManager.CreateToken() });
+            return Ok(new { Token = await _authManager.CreateToken() ,Username =user.UserName });
         }
     }
 }

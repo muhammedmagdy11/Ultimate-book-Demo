@@ -14,7 +14,7 @@ namespace UltimateDemo.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-
+    [Authorize]
     public class CompaniesController : ControllerBase
     {
         private readonly IRepositoryManager _repositoryManager;
@@ -91,6 +91,19 @@ namespace UltimateDemo.Controllers
             _repositoryManager.Company.DeleteCompany(company);
             _repositoryManager.Save();
             return NoContent();
+
+        }
+        [HttpPut]
+        public IActionResult Update(Company company)
+        {
+            if (company == null)
+            {
+                return NotFound();
+            }
+            _repositoryManager.Company.UpdateCompany(company);
+            _repositoryManager.Save();
+            var companyDto = _mapper.Map<CompanyDto>(company);
+            return Ok(companyDto);
 
         }
     }
